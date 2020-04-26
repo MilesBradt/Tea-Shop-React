@@ -15,7 +15,7 @@ class App extends React.Component {
     };
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.sortAndImportInventory()
     console.log("Master Ticket List: " + this.state.masterInventoryList)
   }
