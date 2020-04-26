@@ -24,6 +24,42 @@ function Home(props) {
                 Caffeine: {item.caffeine}
             </p>
             )}
+            <h1>Black Tea</h1>
+            {props.blackTea.map((item, index) =>
+            <p>
+                Name: {item.name}
+                <br />
+                Price: {item.price}
+                <br />
+                Stock: {item.stock}
+                <br />
+                Caffeine: {item.caffeine}
+            </p>
+            )}
+            <h1>Oolong Tea</h1>
+            {props.oolongTea.map((item, index) =>
+            <p>
+                Name: {item.name}
+                <br />
+                Price: {item.price}
+                <br />
+                Stock: {item.stock}
+                <br />
+                Caffeine: {item.caffeine}
+            </p>
+            )}
+            <h1>Herbal Tea</h1>
+            {props.herbalTea.map((item, index) =>
+            <p>
+                Name: {item.name}
+                <br />
+                Price: {item.price}
+                <br />
+                Stock: {item.stock}
+                <br />
+                Caffeine: {item.caffeine}
+            </p>
+            )}
         </div>
     );
 }
