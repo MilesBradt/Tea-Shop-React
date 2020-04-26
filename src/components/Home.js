@@ -1,24 +1,18 @@
 import React from "react";
+import Detail from "./Detail";
 import propTypes from 'prop-types';
 
 function Home(props) {
     return (
         <div id="homeComponent">
-            <p>Home is working</p>
-            {/* {props.inventory.map((item, index) =>
-                <p key={index}>
-                    Name: {item.name}
-                    <br/>
-                    Type: {item.type}
-                </p>
-            )} */}
             <h1>Green Tea</h1>
             {props.greenTea.map((item, index) =>
             <p key={index}>
                 Name: {item.name}
                 <br />
-                Price: {item.price}
-                <br />
+                <Detail 
+                    price = {item.price}
+                />
                 Stock: {item.stock}
                 <br />
                 Caffeine: {item.caffeine}
@@ -29,8 +23,9 @@ function Home(props) {
             <p key={index}>
                 Name: {item.name}
                 <br />
-                Price: {item.price}
-                <br />
+                <Detail 
+                    price = {item.price}
+                />
                 Stock: {item.stock}
                 <br />
                 Caffeine: {item.caffeine}
@@ -41,8 +36,9 @@ function Home(props) {
             <p key={index}>
                 Name: {item.name}
                 <br />
-                Price: {item.price}
-                <br />
+                <Detail 
+                    price = {item.price}
+                />
                 Stock: {item.stock}
                 <br />
                 Caffeine: {item.caffeine}
@@ -53,8 +49,9 @@ function Home(props) {
             <p key={index}>
                 Name: {item.name}
                 <br />
-                Price: {item.price}
-                <br />
+                <Detail 
+                    price = {item.price}
+                />
                 Stock: {item.stock}
                 <br />
                 Caffeine: {item.caffeine}
@@ -71,6 +68,5 @@ Home.propTypes = {
     oolongTea: propTypes.array,
     herbalTea: propTypes.array
 }
-
 
 export default Home;
