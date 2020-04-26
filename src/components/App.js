@@ -47,7 +47,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <p>App works</p>
         <Home 
         inventory = {this.state.masterInventoryList}
         greenTea = {this.state.greenTeaList}

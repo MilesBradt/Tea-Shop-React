@@ -7,55 +7,58 @@ function Home(props) {
         <div id="homeComponent">
             <h1>Green Tea</h1>
             {props.greenTea.map((item, index) =>
-            <p key={index}>
+            <div key={index}>
                 Name: {item.name}
                 <br />
                 <Detail 
                     price = {item.price}
+                    stock = {item.stock}
+                    caffeine = {item.caffeine}
                 />
-                Stock: {item.stock}
-                <br />
-                Caffeine: {item.caffeine}
-            </p>
+                <br/>
+            </div>
             )}
+            <br/>
             <h1>Black Tea</h1>
             {props.blackTea.map((item, index) =>
-            <p key={index}>
+            <div key={index}>
                 Name: {item.name}
                 <br />
                 <Detail 
                     price = {item.price}
+                    stock = {item.stock}
+                    caffeine = {item.caffeine}
                 />
-                Stock: {item.stock}
-                <br />
-                Caffeine: {item.caffeine}
-            </p>
+                <br/>
+            </div>
             )}
+            <br/>
             <h1>Oolong Tea</h1>
             {props.oolongTea.map((item, index) =>
-            <p key={index}>
+            <div key={index}>
                 Name: {item.name}
                 <br />
                 <Detail 
                     price = {item.price}
+                    stock = {item.stock}
+                    caffeine = {item.caffeine}
                 />
-                Stock: {item.stock}
-                <br />
-                Caffeine: {item.caffeine}
-            </p>
+                <br/>
+            </div>
             )}
+            <br/>
             <h1>Herbal Tea</h1>
             {props.herbalTea.map((item, index) =>
-            <p key={index}>
+            <div key={index}>
                 Name: {item.name}
                 <br />
                 <Detail 
                     price = {item.price}
+                    stock = {item.stock}
+                    caffeine = {item.caffeine}
                 />
-                Stock: {item.stock}
-                <br />
-                Caffeine: {item.caffeine}
-            </p>
+                <br/>
+            </div>
             )}
         </div>
     );
