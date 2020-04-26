@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 function Home(props) {
     return (
         <div id="homeComponent">
-            <p>Home Works</p>
+            <p>Home is working</p>
             {props.inventory.map((item, index) =>
                 <p key={index}>
                     {item.name}
