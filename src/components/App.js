@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './Home';
+import inventory from '../assets/javascript/inventory.js'
 import '../assets/css/App.css';
 
 class App extends React.Component {
@@ -10,7 +11,16 @@ class App extends React.Component {
     };
   }
 
+  componentWillMount() {
+    this.importInventory()
+    console.log("Master Ticket List: " + this.state.masterInventoryList)
+  }
 
+  importInventory() {
+    inventory.map((item) =>
+      this.state.masterInventoryList.push(item)
+      )
+  }
 
   render() {
     return (
