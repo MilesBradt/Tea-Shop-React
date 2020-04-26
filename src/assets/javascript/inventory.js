@@ -1,4 +1,4 @@
-const teaInventory = [
+const inventory = [
     {
         type: "Green Tea",
         name: "Dragon Well",
@@ -103,6 +103,6 @@ const teaInventory = [
         caffeine: "none",
         id: null
     }
-
 ]
 
+export default inventory;

@@ -26,7 +26,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <p>App works</p>
-        <Home />
+        <Home 
+        inventory = {this.state.masterInventoryList}/>
       </div>
     );
   }
