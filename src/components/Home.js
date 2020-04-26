@@ -5,12 +5,17 @@ function Home(props) {
     return (
         <div id="homeComponent">
             <p>Home Works</p>
+            {props.inventory.map((item, index) =>
+                <p key={index}>
+                    {item.name}
+                </p>
+            )}
         </div>
     );
 }
 
 Home.propTypes = {
-
+    inventory: propTypes.array
 }
 
 
