@@ -15,6 +15,7 @@ class App extends React.Component {
     };
     this.setVisible = this.setVisible.bind(this)
     this.setHidden = this.setHidden.bind(this)
+    this.addStock = this.addStock.bind(this)
   }
 
   UNSAFE_componentWillMount() {
@@ -60,6 +61,12 @@ class App extends React.Component {
     console.log(this.state.masterInventoryList)
   }
 
+  addStock(index) {
+    let newInventory = this.state.masterInventoryList;
+    newInventory[index].stock++
+    this.setState({ masterInventoryList: newInventory })
+  }
+
   render() {
     return (
       <div className="App">
@@ -71,6 +78,7 @@ class App extends React.Component {
           herbalTea = {this.state.herbalTeaList}
           setVisible = {this.setVisible}
           setHidden = {this.setHidden}
+          addStock = {this.addStock}
         />
       </div>
     );
