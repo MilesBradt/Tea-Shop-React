@@ -2,25 +2,20 @@ import React from "react";
 import propTypes from 'prop-types';
 
 function Detail(props) {
-    if(props.isVisible === true) {
-        return (
-            <div id="detailComponent">
-                -------
-                <br/>
-                Price: {props.price}
-                <br/>
-                Stock: {props.stock}
-                <br/>
-                Caffeine: {props.caffeine}
-            </div> 
-        );
-    } else {
-        return (
-            <div>
-                <p>not working :(</p>
-            </div>
-        );
-    }
+
+    return (
+        <div id="detailComponent">
+            -------
+                <br />
+            Price: {props.price}
+            <br />
+            Stock: {props.stock}
+            <br />
+            Caffeine: {props.caffeine}
+            <br />
+            <button>Hide Details</button>
+        </div>
+    );
 }
 
 Detail.propTypes = {

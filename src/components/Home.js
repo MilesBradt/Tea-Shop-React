@@ -7,61 +7,65 @@ function Home(props) {
         <div id="homeComponent">
             <h1>Green Tea</h1>
             {props.greenTea.map((item, index) =>
-            <div key={index}>
-                Name: {item.name}
-                <br />
-                <button onClick = {props.setVisible}>View Details</button>
-                {console.log("onClick: " + props.isVisible)}
-                <Detail 
-                    price = {item.price}
-                    stock = {item.stock}
-                    caffeine = {item.caffeine}
-                    isVisible = {props.isVisible}
-                />
-                <br/>
-            </div>
+                <div key={index}>
+                    Name: {item.name}
+                    <br />
+                    {props.isVisible 
+                        ? 
+                            <Detail
+                                price={item.price}
+                                stock={item.stock}
+                                caffeine={item.caffeine}
+                            />
+                        : 
+                            <button onClick={props.setVisible}>View Details</button>
+                    }
+                    {console.log("onClick: " + props.isVisible)}
+
+                    <br />
+                </div>
             )}
-            <br/>
+            <br />
             <h1>Black Tea</h1>
             {props.blackTea.map((item, index) =>
-            <div key={index}>
-                Name: {item.name}
-                <br />
-                <Detail 
-                    price = {item.price}
-                    stock = {item.stock}
-                    caffeine = {item.caffeine}
-                />
-                <br/>
-            </div>
+                <div key={index}>
+                    Name: {item.name}
+                    <br />
+                    <Detail
+                        price={item.price}
+                        stock={item.stock}
+                        caffeine={item.caffeine}
+                    />
+                    <br />
+                </div>
             )}
-            <br/>
+            <br />
             <h1>Oolong Tea</h1>
             {props.oolongTea.map((item, index) =>
-            <div key={index}>
-                Name: {item.name}
-                <br />
-                <Detail 
-                    price = {item.price}
-                    stock = {item.stock}
-                    caffeine = {item.caffeine}
-                />
-                <br/>
-            </div>
+                <div key={index}>
+                    Name: {item.name}
+                    <br />
+                    <Detail
+                        price={item.price}
+                        stock={item.stock}
+                        caffeine={item.caffeine}
+                    />
+                    <br />
+                </div>
             )}
-            <br/>
+            <br />
             <h1>Herbal Tea</h1>
             {props.herbalTea.map((item, index) =>
-            <div key={index}>
-                Name: {item.name}
-                <br />
-                <Detail 
-                    price = {item.price}
-                    stock = {item.stock}
-                    caffeine = {item.caffeine}
-                />
-                <br/>
-            </div>
+                <div key={index}>
+                    Name: {item.name}
+                    <br />
+                    <Detail
+                        price={item.price}
+                        stock={item.stock}
+                        caffeine={item.caffeine}
+                    />
+                    <br />
+                </div>
             )}
         </div>
     );
