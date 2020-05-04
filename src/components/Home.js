@@ -5,9 +5,10 @@ import propTypes from 'prop-types';
 function Home(props) {
     return (
         <div id="homeComponent">
-            <h1>Green Tea</h1>
+            <h1 class="tea-type">Green Tea</h1>
             {props.greenTea.map((item, index) =>
                 <div key={index}>
+                    <br />
                     Name: {item.name}
                     <br />
                     {item.visible
@@ -16,18 +17,20 @@ function Home(props) {
                                 price={item.price}
                                 stock={item.stock}
                                 caffeine={item.caffeine}
+                                id={item.id}
+                                setHidden={props.setHidden}
                             />
                         : 
-                            <button onClick={() => props.setVisible(item.id)}>View Details</button>
+                        <button onClick={() => props.setVisible(item.id)}>View Details</button>
                     }
-
-                    <br />
+                <br />
                 </div>
             )}
             <br />
-            <h1>Black Tea</h1>
+            <h1 class="tea-type">Black Tea</h1>
             {props.blackTea.map((item, index) =>
                 <div key={index}>
+                    <br />
                     Name: {item.name}
                     <br />
                     {item.visible
@@ -36,6 +39,8 @@ function Home(props) {
                                 price={item.price}
                                 stock={item.stock}
                                 caffeine={item.caffeine}
+                                id={item.id}
+                                setHidden={props.setHidden}
                             />
                         : 
                             <button onClick={() => props.setVisible(item.id)}>View Details</button>
@@ -44,9 +49,10 @@ function Home(props) {
                 </div>
             )}
             <br />
-            <h1>Oolong Tea</h1>
+            <h1 class="tea-type">Oolong Tea</h1>
             {props.oolongTea.map((item, index) =>
                 <div key={index}>
+                    <br />
                     Name: {item.name}
                     <br />
                     {item.visible
@@ -55,17 +61,20 @@ function Home(props) {
                                 price={item.price}
                                 stock={item.stock}
                                 caffeine={item.caffeine}
+                                id={item.id}
+                                setHidden={props.setHidden}
                             />
                         : 
-                            <button onClick={() => props.setVisible(index)}>View Details</button>
+                            <button onClick={() => props.setVisible(item.id)}>View Details</button>
                     }
                     <br />
                 </div>
             )}
             <br />
-            <h1>Herbal Tea</h1>
+            <h1 class="tea-type">Herbal Tea</h1>
             {props.herbalTea.map((item, index) =>
                 <div key={index}>
+                    <br />
                     Name: {item.name}
                     <br />
                     {item.visible
@@ -74,9 +83,11 @@ function Home(props) {
                                 price={item.price}
                                 stock={item.stock}
                                 caffeine={item.caffeine}
+                                id={item.id}
+                                setHidden={props.setHidden}
                             />
                         : 
-                            <button onClick={() => props.setVisible(index)}>View Details</button>
+                            <button onClick={() => props.setVisible(item.id)}>View Details</button>
                     }
                 </div>
             )}
@@ -90,7 +101,8 @@ Home.propTypes = {
     blackTea: propTypes.array,
     oolongTea: propTypes.array,
     herbalTea: propTypes.array,
-    setVisible: propTypes.func
+    setVisible: propTypes.func,
+    setHidden: propTypes.func
 }
 
 export default Home;

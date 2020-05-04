@@ -6,14 +6,15 @@ function Detail(props) {
     return (
         <div id="detailComponent">
             -------
-                <br />
+            <br />
             Price: {props.price}
             <br />
             Stock: {props.stock}
             <br />
             Caffeine: {props.caffeine}
             <br />
-            <button>Hide Details</button>
+            <button onClick = {() => props.setHidden(props.id)}>Hide Details</button>
+            <br />
         </div>
     );
 }
@@ -21,7 +22,8 @@ function Detail(props) {
 Detail.propTypes = {
     price: propTypes.number,
     stock: propTypes.number,
-    caffeine: propTypes.string
+    caffeine: propTypes.string,
+    setHidden: propTypes.func
 }
 
 export default Detail;

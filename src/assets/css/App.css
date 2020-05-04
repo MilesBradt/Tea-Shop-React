@@ -1,3 +1,8 @@
+body,
+html {
+  height: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +40,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.tea-type {
+  margin-bottom: -15px;
 }
