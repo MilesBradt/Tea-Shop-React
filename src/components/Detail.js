@@ -9,7 +9,7 @@ function Detail(props) {
             <br />
             Price: {props.price}
             <br />
-            Stock: {props.stock} <button onClick = {() => props.addStock(props.id)}>+</button>
+            Stock: <button onClick = {() => props.subtractStock(props.id)}>-</button> {props.stock} <button onClick = {() => props.addStock(props.id)}>+</button>
             <br />
             Caffeine: {props.caffeine}
             <br />
@@ -24,7 +24,8 @@ Detail.propTypes = {
     stock: propTypes.number,
     caffeine: propTypes.string,
     setHidden: propTypes.func,
-    addStock: propTypes.func
+    addStock: propTypes.func,
+    subtractStock: propTypes.func
 }
 
 export default Detail;

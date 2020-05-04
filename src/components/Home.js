@@ -20,6 +20,7 @@ function Home(props) {
                                 id={item.id}
                                 setHidden={props.setHidden}
                                 addStock={props.addStock}
+                                subtractStock={props.subtractStock}
                             />
                         : 
                         <button onClick={() => props.setVisible(item.id)}>View Details</button>
@@ -43,6 +44,7 @@ function Home(props) {
                                 id={item.id}
                                 setHidden={props.setHidden}
                                 addStock={props.addStock}
+                                subtractStock={props.subtractStock}
                             />
                         : 
                             <button onClick={() => props.setVisible(item.id)}>View Details</button>
@@ -66,6 +68,7 @@ function Home(props) {
                                 id={item.id}
                                 setHidden={props.setHidden}
                                 addStock={props.addStock}
+                                subtractStock={props.subtractStock}
                             />
                         : 
                             <button onClick={() => props.setVisible(item.id)}>View Details</button>
@@ -89,6 +92,7 @@ function Home(props) {
                                 id={item.id}
                                 setHidden={props.setHidden}
                                 addStock={props.addStock}
+                                subtractStock={props.subtractStock}
                             />
                         : 
                             <button onClick={() => props.setVisible(item.id)}>View Details</button>
@@ -107,7 +111,8 @@ Home.propTypes = {
     herbalTea: propTypes.array,
     setVisible: propTypes.func,
     setHidden: propTypes.func,
-    addStock: propTypes.func
+    addStock: propTypes.func,
+    subtractStock: propTypes.func
 }
 
 export default Home;
