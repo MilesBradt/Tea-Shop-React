@@ -7,11 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterInventoryList: [],
-      greenTeaList: [],
-      blackTeaList: [],
-      oolongTeaList: [],
-      herbalTeaList: []
+      s
     };
     this.setVisible = this.setVisible.bind(this)
     this.setHidden = this.setHidden.bind(this)
@@ -66,7 +62,7 @@ class App extends React.Component {
   }
 
   subtractStock(index) {
-    if(this.state.masterInventoryList[index].stock != 0) {
+    if(this.state.masterInventoryList[index].stock !== 0) {
       let newInventory = this.state.masterInventoryList;
       newInventory[index].stock--
       this.setState({ masterInventoryList: newInventory })
