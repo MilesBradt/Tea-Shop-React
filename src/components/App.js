@@ -21,7 +21,6 @@ class App extends React.Component {
 
   UNSAFE_componentWillMount() {
     this.sortAndImportInventory()
-    console.log("Master Ticket List: " + this.state.masterInventoryList)
   }
 
   sortAndImportInventory() {
@@ -52,14 +51,12 @@ class App extends React.Component {
     let nowVisible = this.state.masterInventoryList;
     nowVisible[index].visible = true
     this.setState({ masterInventoryList: nowVisible })
-    console.log(this.state.masterInventoryList)
   }
 
   setHidden(index) {
     let nowVisible = this.state.masterInventoryList;
     nowVisible[index].visible = false
     this.setState({ masterInventoryList: nowVisible })
-    console.log(this.state.masterInventoryList)
   }
 
   addStock(index) {
