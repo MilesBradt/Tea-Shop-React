@@ -10,10 +10,12 @@ function Home(props) {
             <div key={index}>
                 Name: {item.name}
                 <br />
+                <button onClick = {props.setVisible}>View Details</button>
                 <Detail 
                     price = {item.price}
                     stock = {item.stock}
                     caffeine = {item.caffeine}
+                    isVisible = {item.isVisible}
                 />
                 <br/>
             </div>
@@ -70,7 +72,8 @@ Home.propTypes = {
     blackTea: propTypes.array,
     oolongTea: propTypes.array,
     herbalTea: propTypes.array,
-    isVisible: propTypes.bool
+    isVisible: propTypes.bool,
+    setVisible: propTypes.func
 }
 
 export default Home;

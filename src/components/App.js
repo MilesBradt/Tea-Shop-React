@@ -14,6 +14,7 @@ class App extends React.Component {
       herbalTeaList: [],
       isVisible: false
     };
+    this.setVisible = this.setVisible.bind(this)
   }
 
   UNSAFE_componentWillMount() {
@@ -45,6 +46,11 @@ class App extends React.Component {
     })
   }
 
+  setVisible() {
+    this.state.isVisible = true;
+    console.log(this.state.isVisible)
+  }
+
   render() {
     return (
       <div className="App">
@@ -55,6 +61,7 @@ class App extends React.Component {
           oolongTea = {this.state.oolongTeaList}
           herbalTea = {this.state.herbalTeaList}
           isVisible = {this.state.isVisible}
+          setVisible = {this.setVisible}
         />
       </div>
     );
