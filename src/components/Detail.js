@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from 'prop-types';
 
 function Detail(props) {
-    if(props.isVisible) {
+    if(props.isVisible === true) {
         return (
             <div id="detailComponent">
                 -------
@@ -17,7 +17,7 @@ function Detail(props) {
     } else {
         return (
             <div>
-                
+                <p>not working :(</p>
             </div>
         );
     }

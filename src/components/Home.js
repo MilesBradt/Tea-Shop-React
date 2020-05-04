@@ -11,11 +11,12 @@ function Home(props) {
                 Name: {item.name}
                 <br />
                 <button onClick = {props.setVisible}>View Details</button>
+                {console.log("onClick: " + props.isVisible)}
                 <Detail 
                     price = {item.price}
                     stock = {item.stock}
                     caffeine = {item.caffeine}
-                    isVisible = {item.isVisible}
+                    isVisible = {props.isVisible}
                 />
                 <br/>
             </div>

@@ -47,7 +47,8 @@ class App extends React.Component {
   }
 
   setVisible() {
-    this.state.isVisible = true;
+    let nowVisible = this.state.isVisible = true;
+    this.setState({ isVisible: nowVisible })
     console.log(this.state.isVisible)
   }
 
