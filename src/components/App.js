@@ -7,7 +7,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      s
+      masterInventoryList: [],
+      greenTeaList: [],
+      blackTeaList: [],
+      oolongTeaList: [],
+      herbalTeaList: []
     };
     this.setVisible = this.setVisible.bind(this)
     this.setHidden = this.setHidden.bind(this)
