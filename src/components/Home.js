@@ -69,7 +69,8 @@ Home.propTypes = {
     greenTea: propTypes.array,
     blackTea: propTypes.array,
     oolongTea: propTypes.array,
-    herbalTea: propTypes.array
+    herbalTea: propTypes.array,
+    isVisible: propTypes.bool
 }
 
 export default Home;

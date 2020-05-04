@@ -11,7 +11,8 @@ class App extends React.Component {
       greenTeaList: [],
       blackTeaList: [],
       oolongTeaList: [],
-      herbalTeaList: []
+      herbalTeaList: [],
+      isVisible: false
     };
   }
 
@@ -48,11 +49,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <Home 
-        inventory = {this.state.masterInventoryList}
-        greenTea = {this.state.greenTeaList}
-        blackTea = {this.state.blackTeaList}
-        oolongTea = {this.state.oolongTeaList}
-        herbalTea = {this.state.herbalTeaList}
+          inventory = {this.state.masterInventoryList}
+          greenTea = {this.state.greenTeaList}
+          blackTea = {this.state.blackTeaList}
+          oolongTea = {this.state.oolongTeaList}
+          herbalTea = {this.state.herbalTeaList}
+          isVisible = {this.state.isVisible}
         />
       </div>
     );
