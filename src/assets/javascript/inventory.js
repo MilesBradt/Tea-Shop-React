@@ -5,7 +5,8 @@ const inventory = [
         price: 2.25,
         stock: 100,
         caffeine: "medium",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Green Tea",
@@ -13,7 +14,8 @@ const inventory = [
         price: 3.50,
         stock: 50,
         caffeine: "medium",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Green Tea",
@@ -21,7 +23,8 @@ const inventory = [
         price: 2.75,
         stock: 75,
         caffeine: "medium",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Green Tea",
@@ -29,7 +32,8 @@ const inventory = [
         price: 2.25,
         stock: 100,
         caffeine: "medium",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Black Tea",
@@ -37,7 +41,8 @@ const inventory = [
         price: 2.25,
         stock: 100,
         caffeine: "high",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Black Tea",
@@ -45,7 +50,8 @@ const inventory = [
         price: 2.25,
         stock: 80,
         caffeine: "high",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Black Tea",
@@ -53,7 +59,8 @@ const inventory = [
         price: 2.75,
         stock: 90,
         caffeine: "high",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Black Tea",
@@ -61,7 +68,8 @@ const inventory = [
         price: 3.25,
         stock: 65,
         caffeine: "high",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Oolong",
@@ -69,7 +77,8 @@ const inventory = [
         price: 3.25,
         stock: 70,
         caffeine: "low",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Oolong",
@@ -77,7 +86,8 @@ const inventory = [
         price: 2.75,
         stock: 80,
         caffeine: "low",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Herbal",
@@ -85,7 +95,8 @@ const inventory = [
         price: 2.50,
         stock: 100,
         caffeine: "none",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Herbal",
@@ -93,7 +104,8 @@ const inventory = [
         price: 2.50,
         stock: 100,
         caffeine: "none",
-        id: null
+        id: null,
+        visible: false
     },
     {
         type: "Herbal",
@@ -101,7 +113,8 @@ const inventory = [
         price: 2.50,
         stock: 80,
         caffeine: "none",
-        id: null
+        id: null,
+        visible: false
     }
 ]
 

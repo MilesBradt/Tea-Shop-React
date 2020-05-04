@@ -21,8 +21,7 @@ function Detail(props) {
 Detail.propTypes = {
     price: propTypes.number,
     stock: propTypes.number,
-    caffeine: propTypes.string,
-    isVisible: propTypes.bool
+    caffeine: propTypes.string
 }
 
 export default Detail;

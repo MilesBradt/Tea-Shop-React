@@ -10,7 +10,7 @@ function Home(props) {
                 <div key={index}>
                     Name: {item.name}
                     <br />
-                    {props.isVisible 
+                    {item.visible
                         ? 
                             <Detail
                                 price={item.price}
@@ -18,9 +18,8 @@ function Home(props) {
                                 caffeine={item.caffeine}
                             />
                         : 
-                            <button onClick={props.setVisible}>View Details</button>
+                            <button onClick={() => props.setVisible(item.id)}>View Details</button>
                     }
-                    {console.log("onClick: " + props.isVisible)}
 
                     <br />
                 </div>
@@ -31,11 +30,16 @@ function Home(props) {
                 <div key={index}>
                     Name: {item.name}
                     <br />
-                    <Detail
-                        price={item.price}
-                        stock={item.stock}
-                        caffeine={item.caffeine}
-                    />
+                    {item.visible
+                        ? 
+                            <Detail
+                                price={item.price}
+                                stock={item.stock}
+                                caffeine={item.caffeine}
+                            />
+                        : 
+                            <button onClick={() => props.setVisible(item.id)}>View Details</button>
+                    }
                     <br />
                 </div>
             )}
@@ -45,11 +49,16 @@ function Home(props) {
                 <div key={index}>
                     Name: {item.name}
                     <br />
-                    <Detail
-                        price={item.price}
-                        stock={item.stock}
-                        caffeine={item.caffeine}
-                    />
+                    {item.visible
+                        ? 
+                            <Detail
+                                price={item.price}
+                                stock={item.stock}
+                                caffeine={item.caffeine}
+                            />
+                        : 
+                            <button onClick={() => props.setVisible(index)}>View Details</button>
+                    }
                     <br />
                 </div>
             )}
@@ -59,12 +68,16 @@ function Home(props) {
                 <div key={index}>
                     Name: {item.name}
                     <br />
-                    <Detail
-                        price={item.price}
-                        stock={item.stock}
-                        caffeine={item.caffeine}
-                    />
-                    <br />
+                    {item.visible
+                        ? 
+                            <Detail
+                                price={item.price}
+                                stock={item.stock}
+                                caffeine={item.caffeine}
+                            />
+                        : 
+                            <button onClick={() => props.setVisible(index)}>View Details</button>
+                    }
                 </div>
             )}
         </div>
@@ -77,7 +90,6 @@ Home.propTypes = {
     blackTea: propTypes.array,
     oolongTea: propTypes.array,
     herbalTea: propTypes.array,
-    isVisible: propTypes.bool,
     setVisible: propTypes.func
 }
 

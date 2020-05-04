@@ -11,8 +11,7 @@ class App extends React.Component {
       greenTeaList: [],
       blackTeaList: [],
       oolongTeaList: [],
-      herbalTeaList: [],
-      isVisible: false
+      herbalTeaList: []
     };
     this.setVisible = this.setVisible.bind(this)
   }
@@ -46,10 +45,11 @@ class App extends React.Component {
     })
   }
 
-  setVisible() {
-    let nowVisible = this.state.isVisible = true;
-    this.setState({ isVisible: nowVisible })
-    console.log(this.state.isVisible)
+  setVisible(index) {
+    let nowVisible = this.state.masterInventoryList;
+    nowVisible[index].visible = true
+    this.setState({ masterInventoryList: nowVisible })
+    console.log(this.state.masterInventoryList)
   }
 
   render() {
@@ -61,7 +61,6 @@ class App extends React.Component {
           blackTea = {this.state.blackTeaList}
           oolongTea = {this.state.oolongTeaList}
           herbalTea = {this.state.herbalTeaList}
-          isVisible = {this.state.isVisible}
           setVisible = {this.setVisible}
         />
       </div>
